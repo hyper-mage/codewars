@@ -24,42 +24,42 @@ def solution(n):
         elif n >= 500:
             if n >= 900:
                 rn += 'CM'
-                n -= 500
+                n -= 900
             else:
                 rn += 'D'
                 n -= 500
         elif n >= 100:
             if n >= 400:
                 rn += 'CD'
-                n -= 100
+                n -= 400
             else:
                 rn += 'C'
                 n -= 100
         elif n >= 50:
             if n >= 90:
                 rn += 'XC'
-                n -= 50
+                n -= 90
             else:
                 rn += 'L'
                 n -= 50
         elif n >= 10:
             if n >= 40:
                 rn += 'XL'
-                n -= 10
+                n -= 40
             else:
                 rn += 'X'
                 n -= 10
         elif n >= 5:
             if n >= 9:
                 rn += 'VX'
-                n -= 5
+                n -= 9
             else:
                 rn += 'V'
                 n -= 5
         elif n >= 1:
             if n >= 4:
                 rn += 'IV'
-                n -= 1
+                n -= 4
             else:
                 rn += 'I'
                 n -= 1     
