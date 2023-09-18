@@ -9,7 +9,10 @@
 # I think a new set of checks will be more readable and efficient
  # so 900 fails for >= 1000 but passes for >= 900 which gives CM
   # I don't really like that but that is my initial thought
+  # I feel like there is a more clever way to pull that off
 
+# NOTE: this will only work up to 3999 per the description rules
+# 4000 will give MMMM which is not right
 
 def solution(n):
     # TODO convert int to roman string
@@ -19,22 +22,48 @@ def solution(n):
             rn += 'M'
             n -= 1000
         elif n >= 500:
-            rn += 'D'
-            n -= 500
+            if n >= 900:
+                rn += 'CM'
+                n -= 500
+            else:
+                rn += 'D'
+                n -= 500
         elif n >= 100:
-            rn += 'C'
-            n -= 100
+            if n >= 400:
+                rn += 'CD'
+                n -= 100
+            else:
+                rn += 'C'
+                n -= 100
         elif n >= 50:
-            rn += 'L'
-            n -= 50
+            if n >= 90:
+                rn += 'XC'
+                n -= 50
+            else:
+                rn += 'L'
+                n -= 50
         elif n >= 10:
-            rn += 'X'
-            n -= 10
+            if n >= 40:
+                rn += 'XL'
+                n -= 10
+            else:
+                rn += 'X'
+                n -= 10
         elif n >= 5:
-            rn += 'V'
-            n -= 5
+            if n >= 9:
+                rn += 'VX'
+                n -= 5
+            else:
+                rn += 'V'
+                n -= 5
         elif n >= 1:
-            rn += 'I'
-            n -= 1
-            
-    return
+            if n >= 4:
+                rn += 'IV'
+                n -= 1
+            else:
+                rn += 'I'
+                n -= 1     
+    return rn
+
+
+solution(1990)
