@@ -1,2 +1,2 @@
 # codewars
-repo for some of my codewar solutions
+repo for some of my codewars solutions
