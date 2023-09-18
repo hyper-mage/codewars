@@ -14,6 +14,11 @@
 # NOTE: this will only work up to 3999 per the description rules
 # 4000 will give MMMM which is not right
 
+# first submit failed 3 tests all ending in 89
+    # looks like i did the sub rules wrong for 5
+    # and probably 50 and 500 too if i had to guess
+    # nope it was literally a typo VX instead of IV...
+
 def solution(n):
     # TODO convert int to roman string
     rn = ''
@@ -51,7 +56,7 @@ def solution(n):
                 n -= 10
         elif n >= 5:
             if n >= 9:
-                rn += 'VX'
+                rn += 'IX'
                 n -= 9
             else:
                 rn += 'V'
