@@ -64,6 +64,3 @@ def solution(n):
                 rn += 'I'
                 n -= 1     
     return rn
-
-
-solution(1990)
